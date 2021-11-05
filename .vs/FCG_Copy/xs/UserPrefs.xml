@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{8BB0BC84-000E-44BC-8EA5-11E54A3EDC83}|Default">
+  <MonoDevelop.Ide.ItemProperties.FCG__Copy PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FCG_Copy/MainWindow.cs">
+    <Files>
+      <File FileName="FCG_Copy/Program.cs" Line="1" Column="1" />
+      <File FileName="FCG_Copy/MainWindow.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FCG_Copy" expanded="True">
+            <Node name="FCG_Copy" expanded="True">
+              <Node name="MainWindow.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

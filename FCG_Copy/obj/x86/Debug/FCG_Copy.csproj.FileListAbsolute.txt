@@ -1,0 +1,6 @@
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/bin/Debug/FCG_Copy.exe
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/bin/Debug/FCG_Copy.pdb
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/obj/x86/Debug/FCG_Copy.csprojAssemblyReference.cache
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/obj/x86/Debug/FCG_Copy.csproj.CoreCompileInputs.cache
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/obj/x86/Debug/FCG_Copy.exe
+/home/sonnardo/Projects/FCG_Copy/FCG_Copy/obj/x86/Debug/FCG_Copy.pdb
