@@ -3,20 +3,116 @@
 
 public partial class MainWindow
 {
+	private global::Gtk.UIManager UIManager;
+
+	private global::Gtk.Action OpenAction;
+
+	private global::Gtk.Action TestAction;
+
+	private global::Gtk.Action DateiAction;
+
+	private global::Gtk.Action ExitAction;
+
+	private global::Gtk.Action quitAction;
+
+	private global::Gtk.Action Action;
+
+	private global::Gtk.VBox vbox3;
+
+	private global::Gtk.MenuBar menubar5;
+
+	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+
+	private global::Gtk.TreeView treeview5;
+
+	private global::Gtk.Fixed fixed6;
+
+	private global::Gtk.Button btnCopy;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
+		this.UIManager = new global::Gtk.UIManager();
+		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
+		this.OpenAction = new global::Gtk.Action("OpenAction", global::Mono.Unix.Catalog.GetString("Open"), null, null);
+		this.OpenAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Open");
+		w1.Add(this.OpenAction, null);
+		this.TestAction = new global::Gtk.Action("TestAction", global::Mono.Unix.Catalog.GetString("Test"), null, null);
+		this.TestAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Test");
+		w1.Add(this.TestAction, null);
+		this.DateiAction = new global::Gtk.Action("DateiAction", global::Mono.Unix.Catalog.GetString("Datei"), null, null);
+		this.DateiAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Datei");
+		w1.Add(this.DateiAction, null);
+		this.ExitAction = new global::Gtk.Action("ExitAction", global::Mono.Unix.Catalog.GetString("Exit"), null, null);
+		this.ExitAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Exit");
+		w1.Add(this.ExitAction, null);
+		this.quitAction = new global::Gtk.Action("quitAction", global::Mono.Unix.Catalog.GetString("Exit"), null, "gtk-quit");
+		this.quitAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Exit");
+		w1.Add(this.quitAction, null);
+		this.Action = new global::Gtk.Action("Action", null, null, null);
+		w1.Add(this.Action, null);
+		this.UIManager.InsertActionGroup(w1, 0);
+		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		// Container child MainWindow.Gtk.Container+ContainerChild
+		this.vbox3 = new global::Gtk.VBox();
+		this.vbox3.Name = "vbox3";
+		this.vbox3.Spacing = 6;
+		// Container child vbox3.Gtk.Box+BoxChild
+		this.UIManager.AddUiFromString("<ui><menubar name=\'menubar5\'><menu name=\'DateiAction\' action=\'DateiAction\'><menui" +
+				"tem name=\'quitAction\' action=\'quitAction\'/></menu></menubar></ui>");
+		this.menubar5 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar5")));
+		this.menubar5.Name = "menubar5";
+		this.vbox3.Add(this.menubar5);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.menubar5]));
+		w2.Position = 0;
+		w2.Expand = false;
+		w2.Fill = false;
+		// Container child vbox3.Gtk.Box+BoxChild
+		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow();
+		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+		this.treeview5 = new global::Gtk.TreeView();
+		this.treeview5.CanFocus = true;
+		this.treeview5.Name = "treeview5";
+		this.GtkScrolledWindow.Add(this.treeview5);
+		this.vbox3.Add(this.GtkScrolledWindow);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.GtkScrolledWindow]));
+		w4.Position = 1;
+		// Container child vbox3.Gtk.Box+BoxChild
+		this.fixed6 = new global::Gtk.Fixed();
+		this.fixed6.HeightRequest = 150;
+		this.fixed6.Name = "fixed6";
+		this.fixed6.HasWindow = false;
+		// Container child fixed6.Gtk.Fixed+FixedChild
+		this.btnCopy = new global::Gtk.Button();
+		this.btnCopy.CanFocus = true;
+		this.btnCopy.Name = "btnCopy";
+		this.btnCopy.UseUnderline = true;
+		this.btnCopy.Label = global::Mono.Unix.Catalog.GetString("Copy");
+		this.fixed6.Add(this.btnCopy);
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed6[this.btnCopy]));
+		w5.X = 300;
+		w5.Y = 63;
+		this.vbox3.Add(this.fixed6);
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.fixed6]));
+		w6.Position = 2;
+		w6.Expand = false;
+		w6.Fill = false;
+		this.Add(this.vbox3);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 660;
+		this.DefaultHeight = 464;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.quitAction.Activated += new global::System.EventHandler(this.dateiExit);
+		this.btnCopy.Clicked += new global::System.EventHandler(this.clickedCopy);
 	}
 }

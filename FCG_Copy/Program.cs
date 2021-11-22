@@ -8,9 +8,12 @@ namespace FCG_Copy
         public static void Main(string[] args)
         {
             Application.Init();
+
             MainWindow win = new MainWindow();
-            win.Show();
+            win.ShowAll();
+
             Application.Run();
+
         }
     }
 }
